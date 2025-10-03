@@ -89,10 +89,10 @@
   playBtn.addEventListener("click", () => {
     if (audio.paused) {
       audio.play();
-      playBtn.src = "../src/img/pause-fill.svg";
+      playBtn.src = "/public/img/pause-fill.svg";
     } else {
       audio.pause();
-      playBtn.src = "../src/img/play-fill.svg";
+      playBtn.src = "/public/img/play-fill.svg";
     }
   });
 
@@ -121,13 +121,13 @@
   // Toggle repeat
   repeatBtn.addEventListener("click", () => {
     isRepeating = !isRepeating;
-    repeatBtn.src = isRepeating ? "../src/img/repeat-one-line.svg" : "../src/img/repeat-line.svg";
+    repeatBtn.src = isRepeating ? "/public/img/repeat-one-line.svg" : "/public/img/repeat-line.svg";
   });
 
   // Toggle volume
   volumeBtn.addEventListener("click", () => {
     audio.muted = !audio.muted;
-    volumeBtn.src = audio.muted ? "../src/img/volume-mute-fill.svg" : "../src/img/volume-up-fill.svg";
+    volumeBtn.src = audio.muted ? "/public/img/volume-mute-fill.svg" : "/public/img/volume-up-fill.svg";
   });
 
   // Toggle favorite
@@ -135,11 +135,11 @@
     const favorites = getFavorites();
     if (favorites.some(fav => fav.id === currentTrack.id)) {
       setFavorites(favorites.filter(fav => fav.id !== currentTrack.id));
-      favoriteBtn.src = "/src/img/heart-3-line.svg";
+      favoriteBtn.src = "/public/img/heart-3-line.svg";
     } else {
       favorites.push(currentTrack);
       setFavorites(favorites);
-      favoriteBtn.src = "/src/img/heart-fill.svg";
+      favoriteBtn.src = "/public/img/heart-fill.svg";
     }
   });
 
@@ -149,11 +149,11 @@
     currentTrack = track;
     audio.src = track.preview;
     audio.play().catch(err => console.error("Playback error:", err));
-    playBtn.src = "../src/img/pause-fill.svg";
+    playBtn.src = "/public/img/pause-fill.svg";
     songTitle.textContent = track.title || "Unknown Title";
     artistName.textContent = track.artist?.name || "Unknown Artist";
-    albumCover.src = track.album?.cover || "../src/img/girl-listening-to-music.jpg";
-    favoriteBtn.src = getFavorites().some(fav => fav.id === track.id) ? "../src/img/heart-fill.svg" : "../src/img/heart-line.svg";
+    albumCover.src = track.album?.cover || "/public/img/girl-listening-to-music.jpg";
+    favoriteBtn.src = getFavorites().some(fav => fav.id === track.id) ? "/public/img/heart-fill.svg" : "/public/img/heart-fill.svg";
   }
 
   // Search functionality
@@ -170,7 +170,7 @@
         const div = document.createElement("div");
         div.className = "bg-[#ffffff1a] p-4 rounded-lg cursor-pointer";
         div.innerHTML = `
-          <img src="${track.album?.cover || '../src/img/girl-listening-to-music.jpg'}" alt="${track.title}" class="w-full h-40 object-cover rounded-lg mb-2" />
+          <img src="${track.album?.cover || '/public/img/girl-listening-to-music.jpg'}" alt="${track.title}" class="w-full h-40 object-cover rounded-lg mb-2" />
           <p class="font-bold">${track.title}</p>
           <p class="text-sm">${track.artist?.name || "Unknown Artist"}</p>
         `;
@@ -195,7 +195,7 @@
         const div = document.createElement("div");
         div.className = "bg-[#ffffff1a] p-4 rounded-lg cursor-pointer";
         div.innerHTML = `
-          <img src="${album.cover || '../src/img/girl-listening-to-music.jpg'}" alt="${album.title}" class="w-full h-40 object-cover rounded-lg mb-2" />
+          <img src="${album.cover || '/public/img/girl-listening-to-music.jpg'}" alt="${album.title}" class="w-full h-40 object-cover rounded-lg mb-2" />
           <p class="font-bold">${album.title}</p>
           <p class="text-sm">${album.artist?.name || "Unknown Artist"}</p>
         `;
@@ -221,7 +221,7 @@
         const div = document.createElement("div");
         div.className = "bg-[#ffffff1a] p-4 rounded-lg cursor-pointer";
         div.innerHTML = `
-          <img src="${artist.picture_medium || '../src/img/girl-listening-to-music.jpg'}" alt="${artist.name}" class="w-full h-40 object-cover rounded-lg mb-2" />
+          <img src="${artist.picture_medium || '/public/img/girl-listening-to-music.jpg'}" alt="${artist.name}" class="w-full h-40 object-cover rounded-lg mb-2" />
           <p class="font-bold">${artist.name}</p>
         `;
         div.addEventListener("click", async () => {

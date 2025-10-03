@@ -8,7 +8,7 @@
     
     <style>
       .bg-gradient-custom {
-        background-image: url(../src/img/listening-music.jpg);
+        background-image: url(/public/img/listening-music.jpg);
         background-blend-mode: multiply;
         background-color: rgba(0, 0, 0, 0.708);
         background-repeat: no-repeat;
@@ -24,7 +24,7 @@
     <header class="w-full border-none h-[15vh] fixed top-0 left-0 bg-gradient-custom z-10 transition-all duration-300" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
       <nav class="py-8 px-10 flex flex-row items-center gap-10 text-[#ffffff]">
         <div>
-          <img class="w-[100%]" src="../src/img/white-logo (1).svg" alt="Logo" />
+          <img class="w-[100%]" src="/public/img/white-logo (1).svg" alt="Logo" />
         </div>
         <div class="flex-1">
           <input id="search-bar" type="text" placeholder="Search for songs, albums, or artists..." class="w-full p-2 rounded-lg bg-[#ffffff1a] text-white border-none focus:outline-none" />
@@ -39,20 +39,20 @@
           <h3 id="song-title" class="animate-slide text-[1.5rem] md:text-[5rem] mt-2 ml-9 md:ml-20">Unknown Song</h3>
           <div class="flex items-center ml-9 md:ml-20">
             <p id="artist-name" class="text-[1rem]">Unknown Artist</p>
-            <img id="favorite-btn" src="../src/img/heart-fill.svg" alt="Favorite" class="ml-3 w-4 cursor-pointer [filter:invert(100%)]" />
+            <img id="favorite-btn" src="/public/img/heart-3-line.svg" alt="Favorite" class="ml-3 w-4 cursor-pointer [filter:invert(100%)]" />
           </div>
           <input id="progress-bar" class="ml-9 mt-6 w-[300px] md:ml-20 md:w-[450px] md:mt-7" type="range" min="0" max="100" value="0" />
           <p id="time-display" class="font-DMSans ml-9 md:ml-[470px] md:mt-2">00:00 / 00:00</p>
-          <div class="flex flex-row items-center mt-6 gap-6 justify-center md:gap-15 ml-9 md:ml-20 cursor-pointer">
-            <img id="repeat-btn" src="../src/img/repeat-line.svg" alt="Repeat" class="w-6 [filter:invert(100%)]" />
-            <img id="prev-btn" src="../src/img/skip-back-fill.svg" alt="Previous" class="w-6 [filter:invert(100%)]" />
-            <img id="play-btn" src="../src/img/play-fill.svg" alt="Play" class="w-6 [filter:invert(100%)]" />
-            <img id="next-btn" src="../src/img/skip-forward-fill.svg" alt="Next" class="w-6 [filter:invert(100%)]" />
-            <img id="volume-btn" src="../src/img/volume-up-fill.svg" alt="Volume" class="w-6 [filter:invert(100%)]" />
+          <div class="flex flex-row items-center mt-6 gap-6 justify-center md:gap-15 ml-9 md:ml-2 cursor-pointer">
+            <img id="repeat-btn" src="/public/img/repeat-line.svg" alt="Repeat" class="w-6 [filter:invert(100%)]" />
+            <img id="prev-btn" src="/public/img/skip-back-fill.svg" alt="Previous" class="w-6 [filter:invert(100%)]" />
+            <img id="play-btn" src="/public/img/play-fill.svg" alt="Play" class="w-6 [filter:invert(100%)]" />
+            <img id="next-btn" src="/public/img/skip-forward-fill.svg" alt="Next" class="w-6 [filter:invert(100%)]" />
+            <img id="volume-btn" src="/public/img/volume-up-fill.svg" alt="Volume" class="w-6 [filter:invert(100%)]" />
           </div>
         </div>
         <div class="ml-8 md:mr-30 mt-10 md:mt-20">
-          <img id="album-cover" src="../src/img/girl-listening-to-music.jpg" alt="Album cover" loading="lazy" class="w-[100%] h-[47vh] rounded-3xl md:w-[100%] md:h-[75vh] md:rounded-[15px] object-fit" />
+          <img id="album-cover" src="/public/img/girl-listening-to-music.jpg" alt="Album cover" loading="lazy" class="w-[100%] h-[47vh] rounded-3xl md:w-[100%] md:h-[75vh] md:rounded-[15px] object-fit" />
         </div>
       </div>
 
